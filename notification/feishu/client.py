@@ -5,6 +5,7 @@ import hashlib
 import hmac
 import json
 import time
+import urllib.error
 import urllib.request
 from typing import Any
 
@@ -22,8 +23,17 @@ def _post(webhook_url: str, secret: str, message: dict[str, Any]) -> None:
         webhook_url, data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
         headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": "finance-ai-dashboard/1.0"}, method="POST",
     )
-    with urllib.request.urlopen(request, timeout=15) as response:
-        result = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        body = error.read().decode("utf-8", errors="replace")
+        try:
+            result = json.loads(body)
+            detail = f"code={result.get('code', result.get('StatusCode', 'unknown'))}, msg={result.get('msg', result.get('StatusMessage', 'unknown'))}"
+        except json.JSONDecodeError:
+            detail = "non-JSON response"
+        raise RuntimeError(f"Feishu HTTP {error.code}: {detail}") from error
     if result.get("code", result.get("StatusCode", 0)) != 0:
         raise RuntimeError(f"Feishu rejected the message: {result}")
 

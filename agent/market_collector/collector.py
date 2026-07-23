@@ -51,7 +51,9 @@ def _fetch_one(instrument: dict[str, Any], now: datetime) -> dict[str, Any]:
                     "close": latest["close"], "previous_close": previous["close"], "change": round(change, 4),
                     "change_pct": round(change / previous["close"] * 100, 4),
                     "trend_5d": round((latest["close"] / trend_base - 1) * 100, 4),
-                    "status": "fresh" if age <= 5 else "stale", "source": f"Yahoo Finance ({source_symbol})", "history": history[-60:],
+                    "status": "fresh" if age <= 5 else "stale",
+                    "source": f"Yahoo Finance ({source_symbol}{' · TOPIX ETF proxy' if source_symbol == '1306.T' else ''})",
+                    "history": history[-60:],
                 }
             except (RuntimeError, KeyError, IndexError, TypeError, ValueError) as error:
                 last_error = error

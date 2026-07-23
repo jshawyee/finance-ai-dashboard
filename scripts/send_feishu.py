@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,5 +26,17 @@ except Exception as card_error:
     dashboard_url = os.environ.get("DASHBOARD_URL", "")
     fallback = f"Market Pulse 金融日报 · {data['meta']['report_date']}\n{report['headline']}\n\n{indices}\n\n{report['disclaimer']}\n{dashboard_url}"
     print(f"Interactive card failed ({type(card_error).__name__}); trying plain text fallback.")
-    send_feishu_text(webhook, secret, fallback)
-    print("Feishu plain text fallback sent successfully.")
+    try:
+        send_feishu_text(webhook, secret, fallback)
+        print("Feishu plain text fallback sent successfully.")
+    except Exception as final_error:
+        diagnostic = ROOT / "data" / "system" / "feishu-diagnostic.json"
+        diagnostic.parent.mkdir(parents=True, exist_ok=True)
+        diagnostic.write_text(json.dumps({
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "status": "failure",
+            "error_type": type(final_error).__name__,
+            "message": str(final_error)[:500],
+            "note": "This file never contains the webhook URL or signing secret.",
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        raise

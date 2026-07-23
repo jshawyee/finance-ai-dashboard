@@ -111,6 +111,18 @@ jobs:
           DASHBOARD_URL: ${{ steps.deployment.outputs.page_url }}
         run: python scripts/send_feishu.py
 
+      - name: Publish sanitized Feishu diagnostic
+        if: failure() && hashFiles('data/system/feishu-diagnostic.json') != ''
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/system/feishu-diagnostic.json
+          if ! git diff --cached --quiet; then
+            git commit -m "diagnostic: record Feishu error [skip ci]"
+            git push
+          fi
+
       - name: Notify Feishu when the workflow fails
         if: failure()
         env:

@@ -54,7 +54,7 @@ export const fallbackData: DashboardData = {
     quote('^GSPC', '标普 500', '美国', 'index', 7266.99, 0.46),
     quote('^SOX', '费城半导体', '美国', 'index', 12681.12, 1.18),
     quote('^N225', '日经 225', '日本', 'index', 66115.6, -0.18, 'JPY'),
-    quote('^TOPX', 'TOPIX', '日本', 'index', 4011.5, 0.31, 'JPY'),
+    quote('^TOPX', 'TOPIX（ETF 代理）', '日本', 'index', 4011.5, 0.31, 'JPY'),
     quote('^KS11', 'KOSPI', '韩国', 'index', 6747.95, 0.56, 'KRW'),
     quote('^KQ11', 'KOSDAQ', '韩国', 'index', 1192.78, 0.39, 'KRW'),
   ],

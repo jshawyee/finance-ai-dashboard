@@ -4,7 +4,7 @@
     {"symbol": "^GSPC", "name": "标普 500", "market": "美国", "category": "index", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
     {"symbol": "^SOX", "name": "费城半导体", "market": "美国", "category": "index", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
     {"symbol": "^N225", "name": "日经 225", "market": "日本", "category": "index", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
-    {"symbol": "^TOPX", "aliases": ["^TOPX", "^TPX", "998405.T"], "name": "TOPIX", "market": "日本", "category": "index", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
+    {"symbol": "^TOPX", "aliases": ["^TOPX", "^TPX", "998405.T", "1306.T"], "name": "TOPIX（ETF 代理）", "market": "日本", "category": "index", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
     {"symbol": "^KS11", "name": "KOSPI", "market": "韩国", "category": "index", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"},
     {"symbol": "^KQ11", "name": "KOSDAQ", "market": "韩国", "category": "index", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"}
   ],
