@@ -1,3 +1,3 @@
-from .client import send_feishu
+from .client import send_feishu, send_feishu_text
 
-__all__ = ["send_feishu"]
+__all__ = ["send_feishu", "send_feishu_text"]
