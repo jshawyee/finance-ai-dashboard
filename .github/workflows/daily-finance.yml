@@ -97,14 +97,14 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Validate Feishu configuration
-        if: steps.generated.outputs.new_report == 'true'
+        if: steps.generated.outputs.new_report == 'true' || contains(github.event.head_commit.message, '[verify feishu]')
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
         run: python scripts/validate_feishu_config.py
 
       - name: Send Feishu daily report
-        if: steps.generated.outputs.new_report == 'true'
+        if: steps.generated.outputs.new_report == 'true' || contains(github.event.head_commit.message, '[verify feishu]')
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
