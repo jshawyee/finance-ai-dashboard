@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generated_at": "2026-07-23T08:49:44+08:00",
+    "generated_at": "2026-07-23T08:58:15+08:00",
     "report_date": "2026-07-23",
     "timezone": "Asia/Shanghai",
     "status": "partial",
     "status_message": "使用了 1 项缓存，0 项暂不可用；保留可验证数据",
     "next_update": "每天北京时间 10:00；10:20、10:50 自动补偿",
     "version": "1.0.0",
-    "collector_issues": 4
+    "collector_issues": 3
   },
   "indices": [
     {
@@ -2003,7 +2003,7 @@
       "change_pct": 0.31,
       "trend_5d": 1.3993,
       "status": "stale",
-      "source": "缓存 · 演示数据（等待首次自动采集）",
+      "source": "缓存 · 缓存 · 演示数据（等待首次自动采集）",
       "history": [
         {
           "date": "2026-07-07",
@@ -4084,11 +4084,11 @@
       "category": "macro",
       "currency": "",
       "trade_date": "2026-07-22",
-      "close": 101.105,
+      "close": 101.107,
       "previous_close": 101.18,
-      "change": -0.075,
-      "change_pct": -0.0741,
-      "trend_5d": 0.602,
+      "change": -0.073,
+      "change_pct": -0.0721,
+      "trend_5d": 0.604,
       "status": "fresh",
       "source": "Yahoo Finance (DX-Y.NYB)",
       "history": [
@@ -4568,8 +4568,8 @@
           "date": "2026-07-22",
           "open": 101.12,
           "high": 101.125,
-          "low": 101.095,
-          "close": 101.105,
+          "low": 101.093,
+          "close": 101.107,
           "volume": 0.0
         }
       ]
@@ -4581,11 +4581,11 @@
       "category": "macro",
       "currency": "JPY",
       "trade_date": "2026-07-22",
-      "close": 163.108,
+      "close": 163.077,
       "previous_close": 163.186,
-      "change": -0.078,
-      "change_pct": -0.0478,
-      "trend_5d": 0.6392,
+      "change": -0.109,
+      "change_pct": -0.0668,
+      "trend_5d": 0.6201,
       "status": "fresh",
       "source": "Yahoo Finance (JPY=X)",
       "history": [
@@ -5065,8 +5065,8 @@
           "date": "2026-07-22",
           "open": 163.09,
           "high": 163.152,
-          "low": 163.051,
-          "close": 163.108,
+          "low": 163.05,
+          "close": 163.077,
           "volume": 0.0
         }
       ]
@@ -5078,11 +5078,11 @@
       "category": "macro",
       "currency": "KRW",
       "trade_date": "2026-07-22",
-      "close": 1472.38,
+      "close": 1471.78,
       "previous_close": 1479.72,
-      "change": -7.34,
-      "change_pct": -0.496,
-      "trend_5d": -0.9299,
+      "change": -7.94,
+      "change_pct": -0.5366,
+      "trend_5d": -0.9703,
       "status": "fresh",
       "source": "Yahoo Finance (KRW=X)",
       "history": [
@@ -5562,8 +5562,8 @@
           "date": "2026-07-22",
           "open": 1476.5699,
           "high": 1477.92,
-          "low": 1472.28,
-          "close": 1472.38,
+          "low": 1471.58,
+          "close": 1471.78,
           "volume": 0.0
         }
       ]
@@ -5575,11 +5575,11 @@
       "category": "macro",
       "currency": "USD",
       "trade_date": "2026-07-22",
-      "close": 88.05,
+      "close": 87.98,
       "previous_close": 84.91,
-      "change": 3.14,
-      "change_pct": 3.698,
-      "trend_5d": 10.6156,
+      "change": 3.07,
+      "change_pct": 3.6156,
+      "trend_5d": 10.5276,
       "status": "fresh",
       "source": "Yahoo Finance (CL=F)",
       "history": [
@@ -6060,8 +6060,8 @@
           "open": 87.72,
           "high": 88.4,
           "low": 87.32,
-          "close": 88.05,
-          "volume": 14592.0
+          "close": 87.98,
+          "volume": 15910.0
         }
       ]
     },
@@ -6072,11 +6072,11 @@
       "category": "macro",
       "currency": "USD",
       "trade_date": "2026-07-22",
-      "close": 4131.2998,
+      "close": 4130.8999,
       "previous_close": 4071.1001,
-      "change": 60.1997,
-      "change_pct": 1.4787,
-      "trend_5d": 2.1587,
+      "change": 59.7998,
+      "change_pct": 1.4689,
+      "trend_5d": 2.1489,
       "status": "fresh",
       "source": "Yahoo Finance (GC=F)",
       "history": [
@@ -6557,8 +6557,8 @@
           "open": 4126.0,
           "high": 4138.0,
           "low": 4074.6001,
-          "close": 4131.2998,
-          "volume": 11390.0
+          "close": 4130.8999,
+          "volume": 11558.0
         }
       ]
     }
@@ -18786,6 +18786,31 @@
       "is_official": false
     },
     {
+      "id": "829ed645ae29a3f5",
+      "title": "Alphabet Q2 2026 Earnings : YouTube 13 % Ad Revenue Growth Paces Results",
+      "url": "https://deadline.com/2026/07/youtube-ad-revenue-rises-q2-2026-alphabet-billion-1237000530/",
+      "source": "deadline.com",
+      "published_at": "2026-07-22T21:45:00Z",
+      "category": "technology",
+      "symbols": [
+        "GOOGL"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "72bf387f4b46b07a",
+      "title": "Intel Jumps 6 % on RBC Q2 Beat Call , AMD Rises 4 %, Broadcom Climbs 3 % as Chip Rally Resumes",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/intel-jumps-6-rbc-q2-132149136.html",
+      "source": "finance.yahoo.com",
+      "published_at": "2026-07-22T21:45:00Z",
+      "category": "technology",
+      "symbols": [
+        "AMD",
+        "AVGO"
+      ],
+      "is_official": false
+    },
+    {
       "id": "75607acb5e92b937",
       "title": "Better , faster satellite - to - mobile is nearly here : Will it kill off our telcos ?",
       "url": "https://www.nzherald.co.nz/business/better-faster-satellite-to-mobile-is-nearly-here-will-it-kill-off-our-telcos/premium/FSR7S5CRVJEJDM6X3W2GFMFCAY/",
@@ -18826,6 +18851,92 @@
       "category": "space",
       "symbols": [
         "SPCX"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "183e5e40f7484443",
+      "title": "AMD to supply Anthropic with 2 gigawatts of Instinct MI450 GPUs will invest up to $5 billion in the Claude developer , which is already using MI355X GPUs",
+      "url": "https://www.tomshardware.com/tech-industry/amd-to-supply-anthropic-with-2-gigawatts-of-instinct-mi450-gpus",
+      "source": "tomshardware.com",
+      "published_at": "2026-07-22T16:30:00Z",
+      "category": "technology",
+      "symbols": [
+        "AMD"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "47300da758f41ebe",
+      "title": "Big Tech Is Hiding $1 . 65 Trillion in Debt . How Worried Should Investors Be ?",
+      "url": "https://finance.yahoo.com/technology/ai/articles/big-tech-hiding-1-65-152842439.html",
+      "source": "finance.yahoo.com",
+      "published_at": "2026-07-22T16:00:00Z",
+      "category": "technology",
+      "symbols": [],
+      "is_official": false
+    },
+    {
+      "id": "08106db83dc5044a",
+      "title": "The Updated top 15 holdings of ETF CHAT - 博客",
+      "url": "https://blog.wenxuecity.com/myblog/82763/202607/15940.html",
+      "source": "blog.wenxuecity.com",
+      "published_at": "2026-07-22T15:45:00Z",
+      "category": "technology",
+      "symbols": [],
+      "is_official": false
+    },
+    {
+      "id": "c9610d586978f039",
+      "title": "Alphabet earnings offer a moment of truth in this tech stock battle",
+      "url": "https://finance.yahoo.com/technology/article/alphabet-earnings-offer-a-moment-of-truth-in-this-tech-stock-battle-121514421.html",
+      "source": "finance.yahoo.com",
+      "published_at": "2026-07-22T13:00:00Z",
+      "category": "technology",
+      "symbols": [
+        "GOOGL"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "24951e9b42762fb7",
+      "title": "STARTRADER Introduces 24 / 7 US Stock CFDs Across NVIDIA , Apple , Meta , and Leading Global Equities",
+      "url": "https://www.manilatimes.net/2026/07/22/tmt-newswire/pr-newswire/startrader-introduces-247-us-stock-cfds-across-nvidia-apple-meta-and-leading-global-equities/2389144",
+      "source": "manilatimes.net",
+      "published_at": "2026-07-22T10:00:00Z",
+      "category": "technology",
+      "symbols": [
+        "NVDA",
+        "META",
+        "AAPL"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "99d1e4109bb7cd4d",
+      "title": "STARTRADER Introduces 24 / 7 US Stock CFDs Across NVIDIA , Apple , Meta , and Leading Global Equities",
+      "url": "https://www.manilatimes.net/2026/07/22/tmt-newswire/pr-newswire/startrader-introduces-247-us-stock-cfds-across-nvidia-apple-meta-and-leading-global-equities/2389107",
+      "source": "manilatimes.net",
+      "published_at": "2026-07-22T09:00:00Z",
+      "category": "technology",
+      "symbols": [
+        "NVDA",
+        "META",
+        "AAPL"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "229180d2a228ca40",
+      "title": "STARTRADER Introduces 24 / 7 US Stock CFDs Across NVIDIA , Apple , Meta , and Leading Global Equities",
+      "url": "http://www.prnewswire.com/news-releases/startrader-introduces-247-us-stock-cfds-across-nvidia-apple-meta-and-leading-global-equities-302831906.html",
+      "source": "prnewswire.com",
+      "published_at": "2026-07-22T08:15:00Z",
+      "category": "technology",
+      "symbols": [
+        "NVDA",
+        "META",
+        "AAPL"
       ],
       "is_official": false
     },
@@ -18907,6 +19018,44 @@
       "category": "space",
       "symbols": [],
       "is_official": false
+    },
+    {
+      "id": "b147851389582fa6",
+      "title": "Prediction : Broadcom Stock Will Be Worth More Than Apple and Microsoft 10 Years From Now",
+      "url": "https://www.fool.com/investing/2026/07/21/predict-broadcom-stock-worth-more-apple-microsoft/",
+      "source": "fool.com",
+      "published_at": "2026-07-21T18:00:00Z",
+      "category": "technology",
+      "symbols": [
+        "AVGO",
+        "MSFT",
+        "AAPL"
+      ],
+      "is_official": false
+    },
+    {
+      "id": "7a7e6267ee891bb0",
+      "title": "1 Unstoppable Vanguard ETF That Could Turn $500 Per Month Into $1 Million",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/1-unstoppable-vanguard-etf-could-151000702.html",
+      "source": "finance.yahoo.com",
+      "published_at": "2026-07-21T15:45:00Z",
+      "category": "technology",
+      "symbols": [],
+      "is_official": false
+    },
+    {
+      "id": "6c55e200bef1f7f5",
+      "title": "Prediction : Broadcom Stock Will Be Worth More Than Apple and Microsoft 10 Years From Now",
+      "url": "https://www.fool.com/investing/2026/07/21/predict-broadcom-stock-worth-more-apple-microsoft/?source=iedfolrf0000001",
+      "source": "fool.com",
+      "published_at": "2026-07-21T09:15:00Z",
+      "category": "technology",
+      "symbols": [
+        "AVGO",
+        "MSFT",
+        "AAPL"
+      ],
+      "is_official": false
     }
   ],
   "report": {
@@ -18954,17 +19103,17 @@
           "VIX VIX -2.40%，风险偏好可能受到支持",
           "美国十年期收益率 美国 10Y +0.63%，可能影响成长股估值",
           "美元指数 美元指数 -0.07%，需关注对日元、韩元和跨国企业的传导",
-          "WTI 原油 WTI 原油 +3.70%，可能影响化工成本与产品价差预期"
+          "WTI 原油 WTI 原油 +3.62%，可能影响化工成本与产品价差预期"
         ]
       },
       {
         "title": "相关信息",
         "tone": "neutral",
-        "summary": "本期收集 12 条可追溯链接，其中 0 条标记为官方来源。",
+        "summary": "本期收集 24 条可追溯链接，其中 0 条标记为官方来源。",
         "evidence": [
           "AST SpaceMobile ( NASDAQ : ASTS ) Stock Price Down 2 . 2 % – Time to Sell ?",
-          "Better , faster satellite - to - mobile is nearly here : Will it kill off our telcos ?",
-          "Top Space Stocks To Watch Today – July 22nd"
+          "Alphabet Q2 2026 Earnings : YouTube 13 % Ad Revenue Growth Paces Results",
+          "Intel Jumps 6 % on RBC Q2 Beat Call , AMD Rises 4 %, Broadcom Climbs 3 % as Chip Rally Resumes"
         ]
       }
     ],
