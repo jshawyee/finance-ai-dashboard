@@ -1,0 +1,6 @@
+[project]
+name = "finance-ai-dashboard"
+version = "1.0.0"
+description = "Zero-cost daily close market dashboard"
+requires-python = ">=3.11"
+dependencies = []

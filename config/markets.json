@@ -1,0 +1,47 @@
+{
+  "indices": [
+    {"symbol": "^IXIC", "name": "纳斯达克综合", "market": "美国", "category": "index", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "^GSPC", "name": "标普 500", "market": "美国", "category": "index", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "^SOX", "name": "费城半导体", "market": "美国", "category": "index", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "^N225", "name": "日经 225", "market": "日本", "category": "index", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
+    {"symbol": "^TOPX", "aliases": ["^TOPX", "^TPX", "998405.T"], "name": "TOPIX", "market": "日本", "category": "index", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
+    {"symbol": "^KS11", "name": "KOSPI", "market": "韩国", "category": "index", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"},
+    {"symbol": "^KQ11", "name": "KOSDAQ", "market": "韩国", "category": "index", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"}
+  ],
+  "macro": [
+    {"symbol": "^VIX", "name": "VIX", "market": "美国", "category": "macro", "currency": "", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "^TNX", "name": "美国 10Y", "market": "美国", "category": "macro", "currency": "%", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "DX-Y.NYB", "name": "美元指数", "market": "全球", "category": "macro", "currency": "", "timezone": "America/New_York", "close": "17:00"},
+    {"symbol": "JPY=X", "name": "USD/JPY", "market": "外汇", "category": "macro", "currency": "JPY", "timezone": "America/New_York", "close": "17:00"},
+    {"symbol": "KRW=X", "name": "USD/KRW", "market": "外汇", "category": "macro", "currency": "KRW", "timezone": "America/New_York", "close": "17:00"},
+    {"symbol": "CL=F", "name": "WTI 原油", "market": "商品", "category": "macro", "currency": "USD", "timezone": "America/New_York", "close": "17:00"},
+    {"symbol": "GC=F", "name": "黄金", "market": "商品", "category": "macro", "currency": "USD", "timezone": "America/New_York", "close": "17:00"}
+  ],
+  "stocks": [
+    {"symbol": "SPCX", "name": "SpaceX", "market": "美国", "category": "space", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "RKLB", "name": "Rocket Lab", "market": "美国", "category": "space", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "ASTS", "name": "AST SpaceMobile", "market": "美国", "category": "space", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "LUNR", "name": "Intuitive Machines", "market": "美国", "category": "space", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "MU", "name": "Micron", "market": "美国", "category": "memory", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "SNDK", "name": "SanDisk", "market": "美国", "category": "memory", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "STX", "name": "Seagate", "market": "美国", "category": "memory", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "WDC", "name": "Western Digital", "market": "美国", "category": "memory", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "005930.KS", "name": "Samsung Electronics", "market": "韩国", "category": "memory", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"},
+    {"symbol": "000660.KS", "name": "SK hynix", "market": "韩国", "category": "memory", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"},
+    {"symbol": "285A.T", "name": "Kioxia", "market": "日本", "category": "memory", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
+    {"symbol": "LIN", "name": "Linde", "market": "美国", "category": "chemicals", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "DOW", "name": "Dow", "market": "美国", "category": "chemicals", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "DD", "name": "DuPont", "market": "美国", "category": "chemicals", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "APD", "name": "Air Products", "market": "美国", "category": "chemicals", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "4063.T", "name": "Shin-Etsu Chemical", "market": "日本", "category": "chemicals", "currency": "JPY", "timezone": "Asia/Tokyo", "close": "15:30"},
+    {"symbol": "051910.KS", "name": "LG Chem", "market": "韩国", "category": "chemicals", "currency": "KRW", "timezone": "Asia/Seoul", "close": "15:30"},
+    {"symbol": "NVDA", "name": "NVIDIA", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "AMD", "name": "AMD", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "AVGO", "name": "Broadcom", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "MSFT", "name": "Microsoft", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "GOOGL", "name": "Alphabet", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "AMZN", "name": "Amazon", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "META", "name": "Meta", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"},
+    {"symbol": "AAPL", "name": "Apple", "market": "美国", "category": "technology", "currency": "USD", "timezone": "America/New_York", "close": "16:00"}
+  ]
+}

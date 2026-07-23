@@ -1,0 +1,112 @@
+name: Daily Finance Dashboard
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+    - cron: "20 2 * * *"
+    - cron: "50 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-finance-production
+  cancel-in-progress: false
+
+jobs:
+  collect-build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect completed closes and generate report
+        run: python scripts/run_daily.py --skip-if-fresh
+
+      - name: Run Python tests
+        run: python -m unittest discover -s tests
+
+      - name: Sync generated JSON to frontend
+        run: python scripts/sync_frontend_data.py
+
+      - name: Detect a newly generated report
+        id: generated
+        shell: bash
+        run: |
+          if [ -f .daily-generated ]; then
+            echo "new_report=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "new_report=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Persist latest data and history
+        if: steps.generated.outputs.new_report == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest data/history frontend/public/data/dashboard.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update daily market report [skip ci]"
+            git push
+          fi
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: pnpm install --frozen-lockfile
+
+      - name: Type-check and build dashboard
+        working-directory: frontend
+        run: pnpm run build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Send Feishu daily report
+        if: steps.generated.outputs.new_report == 'true'
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+          DASHBOARD_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/send_feishu.py
+
+      - name: Notify Feishu when the workflow fails
+        if: failure()
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+        run: python scripts/send_failure_feishu.py
