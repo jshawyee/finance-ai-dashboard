@@ -4,9 +4,19 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "0 2 * * *"
-    - cron: "20 2 * * *"
-    - cron: "50 2 * * *"
+    # Start shortly before 10:00 and retry at off-peak minutes. GitHub
+    # scheduled events can be delayed or dropped, so a fresh report causes
+    # the later compensation runs to exit without sending duplicate messages.
+    - cron: "47 9 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "7 10 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "27 10 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "47 10 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "7 11 * * *"
+      timezone: "Asia/Shanghai"
   workflow_dispatch:
 
 permissions:
@@ -21,6 +31,7 @@ concurrency:
 jobs:
   collect-build-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -60,7 +60,7 @@ def main() -> None:
     for sector in sectors:
         sector["status"] = "demo"
     news = [{"id": "system-demo", "title": "等待首次自动采集，真实新闻会在任务成功后替换此提示", "url": "#", "source": "系统", "published_at": now.isoformat(timespec="seconds"), "category": "system", "symbols": [], "is_official": True}]
-    output = {"meta": {"generated_at": now.isoformat(timespec="seconds"), "report_date": now.date().isoformat(), "timezone": "Asia/Shanghai", "status": "demo", "status_message": "当前为明确标记的演示数据，等待首次 GitHub Actions 自动采集", "next_update": "每天北京时间 10:00；10:20、10:50 自动补偿", "version": "1.0.0", "collector_issues": 0}, **groups, "sectors": sectors, "news": news, "report": build_daily_report(groups["indices"], groups["macro"], sectors, news)}
+    output = {"meta": {"generated_at": now.isoformat(timespec="seconds"), "report_date": now.date().isoformat(), "timezone": "Asia/Shanghai", "status": "demo", "status_message": "当前为明确标记的演示数据，等待首次 GitHub Actions 自动采集", "next_update": "每天北京时间 09:47 首次尝试；10:07、10:27、10:47、11:07 自动补偿", "version": "1.0.0", "collector_issues": 0}, **groups, "sectors": sectors, "news": news, "report": build_daily_report(groups["indices"], groups["macro"], sectors, news)}
     output["report"]["overview"] = "当前为界面演示数据，不代表真实市场。首次自动任务成功后将替换为最近完整收盘数据。"
     for target in (ROOT / "data" / "latest" / "dashboard.json", ROOT / "frontend" / "public" / "data" / "dashboard.json"):
         target.parent.mkdir(parents=True, exist_ok=True)

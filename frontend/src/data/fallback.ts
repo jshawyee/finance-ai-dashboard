@@ -46,7 +46,7 @@ export const fallbackData: DashboardData = {
     timezone: 'Asia/Shanghai',
     status: 'demo',
     status_message: '等待首次自动任务，当前为界面演示数据',
-    next_update: '每天北京时间 10:00（含 10:20、10:50 补偿任务）',
+    next_update: '每天北京时间 09:47 首次尝试（10:07、10:27、10:47、11:07 自动补偿）',
     version: '1.0.0',
   },
   indices: [

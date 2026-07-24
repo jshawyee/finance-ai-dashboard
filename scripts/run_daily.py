@@ -76,7 +76,7 @@ def main() -> int:
     issue_count = len(market_errors) + len(news_errors)
     message = "所有行情已取得最近完整收盘数据" if status == "fresh" else f"使用了 {stale_count} 项缓存，{expected - actual} 项暂不可用；保留可验证数据"
     data: dict[str, Any] = {
-        "meta": {"generated_at": now.isoformat(timespec="seconds"), "report_date": now.date().isoformat(), "timezone": "Asia/Shanghai", "status": status, "status_message": message, "next_update": "每天北京时间 10:00；10:20、10:50 自动补偿", "version": "1.0.0", "collector_issues": issue_count},
+        "meta": {"generated_at": now.isoformat(timespec="seconds"), "report_date": now.date().isoformat(), "timezone": "Asia/Shanghai", "status": status, "status_message": message, "next_update": "每天北京时间 09:47 首次尝试；10:07、10:27、10:47、11:07 自动补偿", "version": "1.0.0", "collector_issues": issue_count},
         **merged, "sectors": sectors, "news": news,
         "report": build_daily_report(merged["indices"], merged["macro"], sectors, news),
     }
